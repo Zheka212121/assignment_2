@@ -9,10 +9,9 @@ namespace Learning_1
             int score1, score2;
             score1=score2=0;
             string line;
-            int z, moves_made = 0;
+            int z, moves_made;
             char who;
             char s1,s2,s3,s4,s5,s6,s7,s8,s9;
-            s1=s2=s3=s4=s5=s6=s7=s8=s9=' ';
             bool success = false;
 
             while(true){
@@ -23,6 +22,8 @@ namespace Learning_1
                 //Console.WriteLine();
                 if (int.TryParse(line, out z)){
                     if (z==1){
+                        moves_made=0;
+                        s1=s2=s3=s4=s5=s6=s7=s8=s9=' ';
                         while (true)
                         {
                             moves_made++;
@@ -127,7 +128,7 @@ namespace Learning_1
                         }
                         Console.WriteLine("Game Over\n");
                         Console.WriteLine("Game outcome: {0}!", line);
-                        Console.WriteLine("Final Score {0}:{1}", score1, score2);
+                        Console.WriteLine("Final Score\n'X' : 'O'\n {0}  :  {1}\n", score1, score2);
                         Console.WriteLine(" {0} | {1} | {2} \n...+...+...\n {3} | {4} | {5} \n"
                                             +"...+...+...\n {6} | {7} | {8} ", s1,s2,s3,s4,s5,s6,s7,s8,s9);
                         Console.Write("\n[Press Enter to return to main menu...]");
