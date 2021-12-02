@@ -141,7 +141,11 @@ namespace Learning_1
                         Console.ReadLine();
                     }
                     else if(z==3){
-                        break;
+                        Console.Write("Are you sure you want to quit? [y/n] ");
+                        line = Console.ReadLine();
+                        if (line == "y"){
+                            break;
+                        }
                     }
                     else{
                         Console.WriteLine("Sorry, your input is invalid.");
